@@ -15,7 +15,7 @@ public class Portals : MonoBehaviour
             if (contact.thisCollider.Equals(portal1) && contact.otherCollider.CompareTag("Ball"))
             {
                 Vector3 pos = portal2.transform.up;
-                GameObject Ball = Instantiate(Resources.Load("Ball")) as GameObject;
+                GameObject Ball = Instantiate(Resources.Load("Prefabs/Ball")) as GameObject;
                 
                 
                 Ball.transform.position = portal2.transform.position;
