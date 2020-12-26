@@ -12,14 +12,11 @@ public class Room : MonoBehaviour
     public Rigidbody rb;
     
     [SerializeField] private float maxVelocity = 3f;
+    public Vector3 cubeCenterOfMass = new Vector3(0, 0, -20);
     void Start()
     {
         rb.maxAngularVelocity = maxVelocity;
-        // stablizedVectors = new[]
-        // {
-        //     transform.forward, -transform.forward, transform.right, -transform.right, transform.up, -transform.up
-        // };
-        //rb.centerOfMass = transform.position;
+        rb.centerOfMass = cubeCenterOfMass;
     }
     void Update()
     {
@@ -58,8 +55,10 @@ public class Room : MonoBehaviour
             {
                 rb.AddTorque(Vector3.down * x, ForceMode.Impulse);
                 rb.AddTorque(Vector3.right * y, ForceMode.Impulse);
+                
             }
         }
+
     }
 }
 
