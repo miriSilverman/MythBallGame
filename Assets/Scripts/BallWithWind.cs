@@ -9,11 +9,7 @@ public class BallWithWind : MonoBehaviour
     [SerializeField] private GameObject room;
     public Transform child;
     public Collider shutWhileFlying;
-    void Update ()
-    {
-        child.transform.rotation = Quaternion.Euler (0.0f, 0.0f, gameObject.transform.rotation.z * -1.0f);
-    }
-    
+
     private Rigidbody _rb;
     private bool _inWindArea = false;
     private WindArea _windArea;
@@ -34,11 +30,7 @@ public class BallWithWind : MonoBehaviour
         
         //_rb.AddForce(movement*speed);
     }
-    private void OnMouseDown()
-    {
-        room.transform.DORotate(new Vector3(0, 0, 90), 10f);
 
-    }
 
     private void OnTriggerEnter(Collider other)
     {
