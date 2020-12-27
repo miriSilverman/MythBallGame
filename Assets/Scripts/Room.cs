@@ -42,8 +42,10 @@ public class Room : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftControl))
             {
+                
                 int sign = 1;
-                var playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
+                var playerScreenPoint = Camera.main.WorldToScreenPoint(cubeCenterOfMass);
+                float r = new Vector2(x - playerScreenPoint.x,  y - playerScreenPoint.y).magnitude;
                 if (Input.mousePosition.x < playerScreenPoint.x)
                 {
                     sign = -1;
