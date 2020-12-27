@@ -1602,9 +1602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add120b162f44f244a3f97dd260c8570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 700000
+  rotationSpeed: 6
   rb: {fileID: 939321257}
-  maxVelocity: 4
+  maxVelocity: 2.8
   cubeCenterOfMass: {x: 0, y: 0, z: -20}
 --- !u!54 &939321257
 Rigidbody:
@@ -3845,7 +3845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced0e464cbda50d4a8988b20399f71a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 25
+  maxVelocity: 50
+  maxAngularVelocity: 1
 --- !u!4 &7008861312237961
 Transform:
   m_ObjectHideFlags: 0
