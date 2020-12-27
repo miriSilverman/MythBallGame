@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     private int _remainedCollectors = 1;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioSource _glassSound;
+    [SerializeField] private AudioSource _winningSound;
     void Start()
     {
         if (Instance == null)
@@ -26,6 +27,11 @@ public class GameController : MonoBehaviour
     public void GlassAudio()
     {
         _glassSound.Play();
+    }
+
+    public void Winning()
+    {
+        _winningSound.Play();
     }
 
 

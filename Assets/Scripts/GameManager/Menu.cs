@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] private AudioSource pressingButtonSound;
     
     public void NextLevel()
     {
@@ -26,6 +27,38 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
 
+    }
+    
+    public void SelectLevel1()
+    {
+        SceneManager.LoadScene(1);
+
+    }
+    public void SelectLevel2()
+    {
+        SceneManager.LoadScene(2);
+
+    }
+    public void SelectLevel3()
+    {
+        SceneManager.LoadScene(3);
+
+    }
+    public void SelectLevel4()
+    {
+        SceneManager.LoadScene(4);
+
+    }
+
+    public void PressingButtonSound()
+    {
+        pressingButtonSound.Play();
+        StartCoroutine(wait());
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3f);
     }
 
 }

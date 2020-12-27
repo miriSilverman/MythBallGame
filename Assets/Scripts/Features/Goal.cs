@@ -11,7 +11,14 @@ public class Goal : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
+            StartCoroutine(winning());
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
+
+        IEnumerator winning()
+        {
+            GameController.Instance.Winning();
+            yield return new WaitForSeconds(5f);
         }
     }
 
