@@ -13,7 +13,7 @@ public class Portals : MonoBehaviour
         {
             
             
-            if (contact.thisCollider.Equals(portal1) && contact.otherCollider.CompareTag("Ball"))
+            if (contact.thisCollider.Equals(portal1))//
             {
                 /*Vector3 pos = portal2.transform.up;
                 GameObject Ball = Instantiate(Resources.Load("Prefabs/Ball")) as GameObject;
@@ -32,8 +32,9 @@ public class Portals : MonoBehaviour
                 rb.AddForce(addedForce*pos);*/
                 
                 Rigidbody oldRb = contact.otherCollider.GetComponent<Rigidbody>();
+                Vector3 pos = portal2.transform.up;
                 oldRb.position = portal2.transform.position;
-                
+                oldRb.velocity = pos * oldRb.velocity.magnitude;
             }
         }
     }
