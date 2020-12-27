@@ -21,9 +21,10 @@ public class Portals : MonoBehaviour
                 Debug.Log("entered portal with force " + collisionForce);
                 
                 
-                Ball.transform.position = portal2.transform.position;
+                
                 Rigidbody oldRb = contact.otherCollider.GetComponent<Rigidbody>();
                 Rigidbody rb = Ball.GetComponent<Rigidbody>();
+                rb.position = portal2.transform.position;
                 rb = oldRb;
                 //rb.velocity = pos * oldRb.velocity.magnitude;
                 GameObject oldBall = contact.otherCollider.gameObject;
