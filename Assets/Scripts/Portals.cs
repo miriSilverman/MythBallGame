@@ -15,7 +15,7 @@ public class Portals : MonoBehaviour
             
             if (contact.thisCollider.Equals(portal1) && contact.otherCollider.CompareTag("Ball"))
             {
-                Vector3 pos = portal2.transform.up;
+                /*Vector3 pos = portal2.transform.up;
                 GameObject Ball = Instantiate(Resources.Load("Prefabs/Ball")) as GameObject;
                 float collisionForce = other.impulse.magnitude / Time.fixedDeltaTime;
                 Debug.Log("entered portal with force " + collisionForce);
@@ -29,7 +29,11 @@ public class Portals : MonoBehaviour
                 //rb.velocity = pos * oldRb.velocity.magnitude;
                 GameObject oldBall = contact.otherCollider.gameObject;
                 Destroy(oldBall);
-                rb.AddForce(addedForce*pos);
+                rb.AddForce(addedForce*pos);*/
+                
+                Rigidbody oldRb = contact.otherCollider.GetComponent<Rigidbody>();
+                oldRb.position = portal2.transform.position;
+                
             }
         }
     }

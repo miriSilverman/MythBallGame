@@ -15,8 +15,7 @@ public class Ball : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.maxAngularVelocity = maxAngularVelocity;
-        // rb.maxDepenetrationVelocity = maxVelocity;
-        
+
     }
 
     private void FixedUpdate()
