@@ -15,6 +15,7 @@ public class BreakableGlass : MonoBehaviour
             
             if (contact.thisCollider.name.Equals("Glass") || contact.thisCollider.CompareTag("Glass"))
             {
+                GameController.Instance.GlassAudio();
                 float collisionForce = other.impulse.magnitude / Time.fixedDeltaTime;
                 Debug.Log(collisionForce);
                 if (collisionForce > forceThreshold)

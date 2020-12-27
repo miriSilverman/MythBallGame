@@ -7,8 +7,9 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance;
     [SerializeField] private GameObject door;
-    private int _remainedCollectors = 3;
+    private int _remainedCollectors = 1;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioSource _glassSound;
     void Start()
     {
         if (Instance == null)
@@ -20,6 +21,11 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+
+    public void GlassAudio()
+    {
+        _glassSound.Play();
     }
 
 
