@@ -10,9 +10,19 @@ public class Ball : MonoBehaviour
 {
     private Rigidbody rb;
     [SerializeField] private float maxVelocity;
+    [SerializeField] private float maxAngularVelocity;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.maxAngularVelocity = maxVelocity;
+        rb.maxAngularVelocity = maxAngularVelocity;
+        // rb.maxDepenetrationVelocity = maxVelocity;
+        
+    }
+
+    private void FixedUpdate()
+    {
+
+        rb.velocity = Mathf.Min(rb.velocity.magnitude, maxVelocity) * rb.velocity.normalized;
+
     }
 }

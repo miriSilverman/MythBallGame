@@ -48,13 +48,13 @@ public class Room : MonoBehaviour
                 {
                     sign = -1;
                 }
-                rb.AddTorque(Vector3.forward * (y * sign), ForceMode.Impulse);
+                rb.AddTorque(Vector3.forward * (y * sign), ForceMode.VelocityChange);
             }
 
             else
             {
-                rb.AddTorque(Vector3.down * x, ForceMode.Impulse);
-                rb.AddTorque(Vector3.right * y, ForceMode.Impulse);
+                rb.AddTorque(Vector3.down * x, ForceMode.VelocityChange);
+                rb.AddTorque(Vector3.right * y, ForceMode.VelocityChange);
                 
             }
         }
