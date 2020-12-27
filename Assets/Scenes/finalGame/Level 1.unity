@@ -581,6 +581,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8177055541862990046, guid: 030167fbe1d56904899570bc94b4ec06, type: 3}
+      propertyPath: winningPanel
+      value: 
+      objectReference: {fileID: 4889525758384245860}
     - target: {fileID: 8177055541862990047, guid: 030167fbe1d56904899570bc94b4ec06, type: 3}
       propertyPath: m_Name
       value: GameController (1)
@@ -3878,6 +3882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4889525757401224784, guid: 08b0c6132d7875241b3244a77cfcffc1, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4889525757401224791, guid: 08b0c6132d7875241b3244a77cfcffc1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3964,6 +3972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b0c6132d7875241b3244a77cfcffc1, type: 3}
+--- !u!1 &4889525758384245860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1603881052391261593, guid: 08b0c6132d7875241b3244a77cfcffc1, type: 3}
+  m_PrefabInstance: {fileID: 4889525758384245859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4942571819269709464
 GameObject:
   m_ObjectHideFlags: 0

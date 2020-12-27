@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioSource _glassSound;
     [SerializeField] private AudioSource _winningSound;
+    [SerializeField] private GameObject winningPanel;
     void Start()
     {
         if (Instance == null)
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour
     public void Winning()
     {
         _winningSound.Play();
+        winningPanel.SetActive(true);
     }
 
 

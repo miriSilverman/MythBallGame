@@ -477,6 +477,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b0c6132d7875241b3244a77cfcffc1, type: 3}
+--- !u!1 &141977724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1603881052391261593, guid: 08b0c6132d7875241b3244a77cfcffc1, type: 3}
+  m_PrefabInstance: {fileID: 141977723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &179517096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3193,6 +3198,10 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 4452044366849587004}
+    - target: {fileID: 8177055541862990046, guid: 030167fbe1d56904899570bc94b4ec06, type: 3}
+      propertyPath: winningPanel
+      value: 
+      objectReference: {fileID: 141977724}
     - target: {fileID: 8177055541862990047, guid: 030167fbe1d56904899570bc94b4ec06, type: 3}
       propertyPath: m_Name
       value: GameController (1)
