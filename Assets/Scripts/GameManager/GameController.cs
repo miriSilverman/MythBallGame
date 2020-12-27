@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
     [SerializeField] private GameObject door;
     private int _remainedCollectors = 3;
-    
+    [SerializeField] private AudioSource _audioSource;
     void Start()
     {
         if (Instance == null)
@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
 
     public void Collected()
     {
+        _audioSource.Play();
         _remainedCollectors--;
         if (_remainedCollectors == 0)
         {
@@ -34,9 +35,7 @@ public class GameController : MonoBehaviour
 
     private void OpenGate()
     {
-        Debug.Log("COLLECTED ALL DIAMONDS");
         door.SetActive(false);
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     
 }

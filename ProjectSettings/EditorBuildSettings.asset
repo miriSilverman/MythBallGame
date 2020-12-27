@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/realGame/StartMenu.unity
+    path: Assets/Scenes/finalGame/StartMenu.unity
     guid: 237f2efde0cae8d48b4023525e2a8ad5
   - enabled: 1
-    path: Assets/Scenes/realGame/level1.unity
-    guid: e6679a20dcb88234f800c7f1d62a6d10
+    path: Assets/Scenes/finalGame/Level 1.unity
+    guid: 7d474cca3a4c536419fefd61ff7b192a
   - enabled: 1
-    path: Assets/Scenes/realGame/level2.unity
-    guid: 3a98562e54b50184ab53a6b80eb2a7ef
+    path: Assets/Scenes/finalGame/Level 2.unity
+    guid: 5436e35719c055f488f48c107405d328
   - enabled: 1
-    path: Assets/Scenes/realGame/MazeTemplate.unity
-    guid: 65458a7c01de9de46af33b80c58e6c4c
+    path: Assets/Scenes/finalGame/Level 3.unity
+    guid: ef322047b756e964c9d6859e9c684912
+  - enabled: 1
+    path: Assets/Scenes/finalGame/Level 4.unity
+    guid: b48907ba37d94f843836b1c33a347ce0
   m_configObjects: {}

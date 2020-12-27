@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class Collectors : MonoBehaviour
 {
+    [SerializeField] private AudioSource _source;
+
 
     private void Update()
     {
@@ -17,6 +19,7 @@ public class Collectors : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
+            _source.Play();
             GameController.Instance.Collected();
             Destroy(gameObject);
         }
